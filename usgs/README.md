@@ -1,6 +1,6 @@
 # USGS Data Processing Source Code
 
-These Source codes are used to download datasets that will be imported into the database
+These source codes are used to download datasets that will be imported into the database
 
 ## Data.py
 
