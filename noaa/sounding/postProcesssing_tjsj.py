@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
 #--- Set up the working directory
-wpath='C:/Users/Roberto/Desktop/'
+wpath='C:/Users/Roberto/Documents/Climatología/Sounding/processed_soundings_1982-2018/tjsj_soundings_1982-2018/'
 #--- Path to dump all the processed files
-dpath='C:/Users/Roberto/Desktop/dailyData/'
+dpath='C:/Users/Roberto/Documents/Climatología/Sounding/processed_soundings_1982-2018/tjsj_soundings_1982-2018/dailyData/'
 
 #--- Open the files with all the sounding year by year
 for year in range(1982,2020,1):
