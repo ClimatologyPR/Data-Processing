@@ -65,27 +65,32 @@ directory = os.fsencode(wpath)
 with open(outPath+outputFileName, 'w') as outfile, open(outPath+outputFileName1, 'w') as outfile1, open(outPath+outputFileNameInd, 'w') as indexOutfile:
 	for file in os.listdir(directory):
 		filename = os.fsdecode(file)
+		#--- observations processing
 		if filename.endswith("_obs.txt"):
 			print (filename)
 			with open(filename) as infile:
 				for line in infile:
+					#--- if line is Pre-1989 Soundings Header, writes to concatSoundings_obs_pre-1989.csv only once
 					if (line == header) and count == 0:
 						#print(line)
 						outfile.write(line)
 						count = count + 1
+					#--- if line is Post-1989 Sounding Header, writes to concatSoundings_obs_post-1989.csv only once
 					elif (line == header1) and count1 == 0:
 						outfile1.write(line)
 						count1 = count1 + 1
 						post89 = True
+					#--- If line is repeated header o variable type header, ignores
 					elif line == header or line == variableTypes or line == header1 or line == variableTypes1:
 						continue
+					#--- writes line into either csv depending if file is before or after 1989 (determined by boolean value)
 					else:
 						#print(line)
 						if post89 == False:
 							outfile.write(line)
 						elif post89 == True:
 							outfile1.write(line)
-
+		#--- index processing
 		elif filename.endswith("_indices.txt"):
 			print (filename)
 			cleanFile()
