@@ -1,6 +1,7 @@
 import os
 import numpy as np
 
+#--- Removes spaces next to commas
 def cleanFile():
 	#--- Opens file as readable then copies data to y, then closes file
 	data = open(wpath+filename, 'r')
@@ -35,7 +36,7 @@ def transpose():
 
 #--- Working path
 wpath = 'C:/Users/Roberto/Desktop/dailyData/'
-outPath = 'C:/Users/Roberto/Desktop/'
+outPath = 'C:/Users/Roberto/Desktop/dailyData/concat/'
 
 outputFileName = 'concatSoundings_obs_pre-1989.csv'
 outputFileName1 = 'concatSoundings_obs_post-1989.csv'
@@ -49,7 +50,7 @@ variableTypes = "VARCHAR(4),YYYY-MM-DD,HHMMSS,hPa,m,C,C,%,g/kg,deg,knot,K,K,K\n"
 header1 = "STATIONID,DATE,TIME,PRES,HGHT,TEMP,DWPT,FRPT,RELH,RELI,MIXR,DRCT,SKNT,THTA,THTE,THTV\n"
 variableTypes1 = "VARCHAR(4),YYYY-MM-DD,HHMMSS,hPa,m,C,C,C,%,%,g/kg,deg,knot,K,K,K\n"
 
-#--- Index variables
+#--- Index variables *PROBLEM: There is a vast variation of headers in index files* 
 indexHeader = "Station identifier,Station number,Observation time,Station latitude,Station longitude,Station elevation,Showalter index,Lifted index,LIFT computed using virtual temperature,SWEAT index,K index,Cross totals index,Vertical totals index,Totals totals index,Convective Available Potential Energy,CAPE using virtual temperature,Convective Inhibition,CINS using virtual temperature,Equilibrum Level,Equilibrum Level using virtual temperature,Level of Free Convection,LFCT using virtual temperature,Bulk Richardson Number,Bulk Richardson Number using CAPV,Temp [K] of the Lifted Condensation Level,Pres [hPa] of the Lifted Condensation Level,Mean mixed layer potential temperature,Mean mixed layer mixing ratio,1000 hPa to 500 hPa thickness,Precipitable water [mm] for entire sounding\n"
 
 count = 0
