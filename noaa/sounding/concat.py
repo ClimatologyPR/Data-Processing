@@ -35,8 +35,8 @@ def transpose():
 	print(filename+' Transposed')
 
 #--- Working path
-wpath = 'C:/Users/Roberto/Desktop/dailyData/'
-outPath = 'C:/Users/Roberto/Desktop/dailyData/concat/'
+wpath = 'C:/Users/Roberto/Documents/Climatología/Sounding/processed_soundings_1982-2018/tjsj_soundings_1982-2018/dailyData/'
+outPath = 'C:/Users/Roberto/Documents/Climatología/Sounding/processed_soundings_1982-2018/tjsj_soundings_1982-2018/dailyData/concat/'
 
 outputFileName = 'concatSoundings_obs_pre-1989.csv'
 outputFileName1 = 'concatSoundings_obs_post-1989.csv'
