@@ -10,9 +10,9 @@ Uses **"ghcnd-stations.txt"** as a fixed list of stations to read station metada
 
 *[Further modification is needed to show attribute flags]*
 
-Taken from [here](https://superuser.com/questions/1303531/open-dly-file-ghcn-noaa-data-for-analysis) author: ned haughton
-
 Returns .csv file with climate data retrived by the station
+
+Taken from [here](https://superuser.com/questions/1303531/open-dly-file-ghcn-noaa-data-for-analysis) author: ned haughton
 
 ### Dependencies
 
